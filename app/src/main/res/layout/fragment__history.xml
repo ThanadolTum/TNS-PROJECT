@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5"
+    tools:context=".Fragment_History">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/layout_refresh_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_search_type"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="ตัวเลือกค้นหา"
+                android:textSize="10dp" />
+
+            <EditText
+                android:id="@+id/search_parcels"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/search_parcel"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:drawablePadding="5dp"
+                android:elevation="3dp"
+                android:hint="@string/search_parcel"
+                android:padding="5dp"
+                android:textSize="16dp" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/button_layout_listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <Button
+                    android:id="@+id/button_expandable_view"
+                    style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="8dp"
+                    app:icon="@drawable/ic_baseline_list_24"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/search_parcels"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/on_empty_parcels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="42dp"
+                android:layout_toLeftOf="@+id/button_layout_listview"
+                android:fontFamily="sans-serif"
+                android:text="ยังไม่มีรายการพัสดุ"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</FrameLayout>

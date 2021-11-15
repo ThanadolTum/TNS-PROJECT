@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="390dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="10dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:background="#F8F7F7"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/image_parcel"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/parcel" />
+
+            <TextView
+                android:id="@+id/text_view_track_number"
+                style="@style/text_view_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_parcel"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/track_number" />
+
+            <TextView
+                android:id="@+id/tracknumber"
+                style="@style/text_view_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_track_number"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/text_view_owner"
+                style="@style/text_view_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_parcel"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/text_view_track_number"
+                android:text="@string/owner" />
+
+
+            <TextView
+                android:id="@+id/owner_surname"
+                style="@style/text_view_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_owner"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/text_view_track_number" />
+
+            <TextView
+                android:id="@+id/owner_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_view_owner"
+                android:layout_toRightOf="@+id/owner_surname"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                style="@style/text_view_value"/>
+
+            <TextView
+                android:id="@+id/text_check_in"
+                style="@style/text_view_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tracknumber"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/check_in_date" />
+
+            <TextView
+                android:id="@+id/check_in"
+                style="@style/text_view_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_check_in"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/text_time_check_in"
+                style="@style/text_view_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/owner_name"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/text_check_in"
+                android:text="@string/time_to_check_in" />
+
+            <TextView
+                android:id="@+id/check_in_time"
+                style="@style/text_view_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_check_in"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/text_check_in" />
+
+            <Button
+                android:id="@+id/button_edit_parcel"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_in"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/edit" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

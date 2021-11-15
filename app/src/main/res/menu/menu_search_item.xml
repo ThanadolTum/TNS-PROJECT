@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/search_name"
+        android:title="เจ้าของพัสดุ"></item>
+
+    <item
+        android:id="@+id/search_track_number"
+        android:title="หมายเลขติดตามพัสดุ"></item>
+
+    <item
+        android:id="@+id/search_date"
+        android:title="วันที่เจ้าหน้าที่รับพัสดุ"></item>
+
+</menu>

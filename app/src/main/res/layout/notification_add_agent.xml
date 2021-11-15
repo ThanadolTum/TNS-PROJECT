@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="390dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/button_display_name_layout"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="9dp"
+            android:backgroundTint="#3700B3"
+            app:cardCornerRadius="30dp">
+
+            <Button
+                android:id="@+id/button_display_name"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#3700B3"
+                android:textColor="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/button_display_name_layout"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/sender_name"
+            android:fontFamily="sans-serif"
+            android:text="เพิ่มคุณเป็นผู้รับพัสดุ"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sender_name"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/button_display_name_layout" />
+
+        <Button
+            android:id="@+id/button_confirm_agent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_time"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/button_display_name_layout"
+            android:text="@string/accept" />
+
+        <Button
+            android:id="@+id/button_cancel_agent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_time"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/button_confirm_agent"
+            android:backgroundTint="#ECE5E5"
+            android:text="@string/refuse"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

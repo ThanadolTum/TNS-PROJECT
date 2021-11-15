@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/track_number_status_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_toLeftOf="@+id/tracknumber"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/tracknumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="10dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp" />
+
+    <ImageView
+        android:id="@+id/add_image_parcel_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tracknumber" />
+
+    <ImageView
+        android:id="@+id/delete_track_number_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/add_image_parcel_icon"
+        android:layout_marginLeft="5dp" />
+
+</RelativeLayout>

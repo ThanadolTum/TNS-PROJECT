@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="390dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="15dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/track_number_2"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tracknumber"
+        style="@style/text_view_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/drop_list"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_outline_arrow_drop_down_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parcels_listview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tracknumber">
+
+        <ImageView
+            android:id="@+id/image_parcel_history"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/parcel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_track_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/track_number_2"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@+id/image_parcel_history"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tracknumber_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/text_view_track_number"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/owner_2"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@+id/image_parcel_history"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_track_number" />
+
+        <TextView
+            android:id="@+id/owner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/text_view_owner"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_track_number" />
+
+        <TextView
+            android:id="@+id/owner_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/owner_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_track_number" />
+
+        <TextView
+            android:id="@+id/text_check_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/check_in_date_2"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@+id/image_parcel_history"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_owner" />
+
+        <TextView
+            android:id="@+id/check_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/text_check_in"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_owner" />
+
+        <TextView
+            android:id="@+id/check_in_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/check_in"
+            app:layout_constraintTop_toBottomOf="@+id/check_in" />
+
+        <TextView
+            android:id="@+id/text_receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/receiver_2"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@+id/image_parcel_history"
+            app:layout_constraintTop_toBottomOf="@+id/check_in_time" />
+
+        <TextView
+            android:id="@+id/receiver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/text_receiver"
+            app:layout_constraintTop_toBottomOf="@+id/check_in_time" />
+
+        <TextView
+            android:id="@id/receiver_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/receiver_name"
+            app:layout_constraintTop_toBottomOf="@+id/check_in_time" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/check_out_2"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_parcel_history"
+            app:layout_constraintTop_toBottomOf="@+id/text_receiver" />
+
+        <TextView
+            android:id="@+id/check_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/text_receiver" />
+
+        <TextView
+            android:id="@id/check_out_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/check_out" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

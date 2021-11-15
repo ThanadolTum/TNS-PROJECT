@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/image_parcel_1"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="64dp"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <ImageView
+            android:id="@+id/image_parcel_2"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="64dp"
+            android:layout_toRightOf="@+id/image_parcel_1"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <ImageView
+            android:id="@+id/image_parcel_3"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="64dp"
+            android:layout_toRightOf="@+id/image_parcel_2"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <ImageView
+            android:id="@+id/image_parcel_4"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="64dp"
+            android:layout_toRightOf="@+id/image_parcel_3"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <TextView
+            android:id="@+id/button_add_image_parcel"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/image_parcel_3"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/white"
+            android:paddingTop="8dp"
+            android:text="@string/confirm"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
