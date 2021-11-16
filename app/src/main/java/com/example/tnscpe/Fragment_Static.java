@@ -749,11 +749,10 @@ public class Fragment_Static extends Fragment {
                                                                                             Toast.makeText(getContext(), "ไม่พบสถิติการรับพัสดุ", Toast.LENGTH_SHORT).show();
                                                                                         }
                                                                                     });
+                                                                        } else {
+                                                                            progressDialog.dismiss();
+                                                                            Toast.makeText(getContext(), "ไม่พบสถิติการรับพัสดุ", Toast.LENGTH_SHORT).show();
                                                                         }
-//                                                                        else {
-//                                                                            progressDialog.dismiss();
-//                                                                            Toast.makeText(getContext(), "ไม่พบสถิติการรับพัสดุ", Toast.LENGTH_SHORT).show();
-//                                                                        }
                                                                     }
                                                                 } else if (task2.getResult().isEmpty()) {
                                                                     progressDialog.dismiss();
