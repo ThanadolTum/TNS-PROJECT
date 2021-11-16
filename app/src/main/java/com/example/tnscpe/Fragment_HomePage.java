@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -21,24 +20,18 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.mikephil.charting.formatter.IFillFormatter;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.button.MaterialButtonToggleGroup;
@@ -52,12 +45,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Random;
 
 public class Fragment_HomePage extends Fragment {
@@ -697,136 +687,6 @@ public class Fragment_HomePage extends Fragment {
                                                                 }
                                                             });
                                                 }
-
-//                                                if (task1.getResult().get("agent.agent0.firstname").equals(userName) && task1.getResult().get("agent.agent0.lastname").equals(userSurname)) {
-//                                                    db.collection("parcels")
-//                                                            .whereEqualTo("checkOut", null)
-//                                                            .whereEqualTo("owner.firstname", task1.getResult().getString("firstname"))
-//                                                            .whereEqualTo("owner.lastname", task1.getResult().getString("lastname"))
-//                                                            .get()
-//                                                            .addOnCompleteListener(task2 -> {
-//                                                                if (task2.isSuccessful() && task2.getResult() != null) {
-//                                                                    docListParcelsId.clear();
-//                                                                    for (QueryDocumentSnapshot getDocParcel : task2.getResult()) {
-//                                                                        docListParcelsId.add(getDocParcel.getId());
-//                                                                    }
-//
-//                                                                    if (!docListParcelsId.isEmpty()) {
-//                                                                        emptyParcels.setVisibility(View.GONE);
-//                                                                        searchParcels.setVisibility(View.VISIBLE);
-//                                                                        buttonToggleGroupListview.setVisibility(View.VISIBLE);
-//                                                                        for (String docIdCurrentUser : docListParcelsId) {
-//                                                                            db.collection("parcels").document(docIdCurrentUser)
-//                                                                                    .addSnapshotListener((value, error) -> {
-//                                                                                        if (error != null) {
-//                                                                                            Log.d("Error home page", error.getMessage());
-//                                                                                            if (progressDialog.isShowing()) {
-//                                                                                                progressDialog.dismiss();
-//                                                                                            }
-//                                                                                        }
-//
-//                                                                                        if (value.exists()) {
-//                                                                                            parcelsModelArrayList.add(value.toObject(ParcelsModel.class));
-//                                                                                        }
-//                                                                                        parcelsAdapter.notifyDataSetChanged();
-//                                                                                        progressDialog.dismiss();
-//                                                                                    });
-//                                                                        }
-//                                                                    } else {
-//                                                                        searchParcels.setVisibility(View.GONE);
-//                                                                        buttonToggleGroupListview.setVisibility(View.GONE);
-//                                                                        emptyParcels.setVisibility(View.VISIBLE);
-//                                                                        progressDialog.dismiss();
-//                                                                    }
-//                                                                }
-//                                                            });
-//                                                }
-//                                                if (task1.getResult().get("agent.agent1.firstname").equals(userName) && task1.getResult().get("agent.agent1.lastname").equals(userSurname)) {
-//                                                    db.collection("parcels")
-//                                                            .whereEqualTo("checkOut", null)
-//                                                            .whereEqualTo("owner.firstname", task1.getResult().getString("firstname"))
-//                                                            .whereEqualTo("owner.lastname", task1.getResult().getString("lastname"))
-//                                                            .get()
-//                                                            .addOnCompleteListener(task2 -> {
-//                                                                if (task2.isSuccessful() && task2.getResult() != null) {
-//                                                                    docListParcelsId.clear();
-//                                                                    for (QueryDocumentSnapshot getDocParcel : task2.getResult()) {
-//                                                                        docListParcelsId.add(getDocParcel.getId());
-//                                                                    }
-//
-//                                                                    if (!docListParcelsId.isEmpty()) {
-//                                                                        emptyParcels.setVisibility(View.GONE);
-//                                                                        searchParcels.setVisibility(View.VISIBLE);
-//                                                                        buttonToggleGroupListview.setVisibility(View.VISIBLE);
-//                                                                        for (String docIdCurrentUser : docListParcelsId) {
-//                                                                            db.collection("parcels").document(docIdCurrentUser)
-//                                                                                    .addSnapshotListener((value, error) -> {
-//                                                                                        if (error != null) {
-//                                                                                            Log.d("Error home page", error.getMessage());
-//                                                                                            if (progressDialog.isShowing()) {
-//                                                                                                progressDialog.dismiss();
-//                                                                                            }
-//                                                                                        }
-//
-//                                                                                        if (value.exists()) {
-//                                                                                            parcelsModelArrayList.add(value.toObject(ParcelsModel.class));
-//                                                                                        }
-//                                                                                        parcelsAdapter.notifyDataSetChanged();
-//                                                                                        progressDialog.dismiss();
-//                                                                                    });
-//                                                                        }
-//                                                                    } else {
-//                                                                        searchParcels.setVisibility(View.GONE);
-//                                                                        buttonToggleGroupListview.setVisibility(View.GONE);
-//                                                                        emptyParcels.setVisibility(View.VISIBLE);
-//                                                                        progressDialog.dismiss();
-//                                                                    }
-//                                                                }
-//                                                            });
-//                                                }
-//                                                if (task1.getResult().get("agent.agent2.firstname").equals(userName) && task1.getResult().get("agent.agent2.lastname").equals(userSurname)) {
-//                                                    db.collection("parcels")
-//                                                            .whereEqualTo("checkOut", null)
-//                                                            .whereEqualTo("owner.firstname", task1.getResult().getString("firstname"))
-//                                                            .whereEqualTo("owner.lastname", task1.getResult().getString("lastname"))
-//                                                            .get()
-//                                                            .addOnCompleteListener(task2 -> {
-//                                                                if (task2.isSuccessful() && task2.getResult() != null) {
-//                                                                    docListParcelsId.clear();
-//                                                                    for (QueryDocumentSnapshot getDocParcel : task2.getResult()) {
-//                                                                        docListParcelsId.add(getDocParcel.getId());
-//                                                                    }
-//
-//                                                                    if (!docListParcelsId.isEmpty()) {
-//                                                                        emptyParcels.setVisibility(View.GONE);
-//                                                                        searchParcels.setVisibility(View.VISIBLE);
-//                                                                        buttonToggleGroupListview.setVisibility(View.VISIBLE);
-//                                                                        for (String docIdCurrentUser : docListParcelsId) {
-//                                                                            db.collection("parcels").document(docIdCurrentUser)
-//                                                                                    .addSnapshotListener((value, error) -> {
-//                                                                                        if (error != null) {
-//                                                                                            Log.d("Error home page", error.getMessage());
-//                                                                                            if (progressDialog.isShowing()) {
-//                                                                                                progressDialog.dismiss();
-//                                                                                            }
-//                                                                                        }
-//
-//                                                                                        if (value.exists()) {
-//                                                                                            parcelsModelArrayList.add(value.toObject(ParcelsModel.class));
-//                                                                                        }
-//                                                                                        parcelsAdapter.notifyDataSetChanged();
-//                                                                                        progressDialog.dismiss();
-//                                                                                    });
-//                                                                        }
-//                                                                    } else {
-//                                                                        searchParcels.setVisibility(View.GONE);
-//                                                                        buttonToggleGroupListview.setVisibility(View.GONE);
-//                                                                        emptyParcels.setVisibility(View.VISIBLE);
-//                                                                        progressDialog.dismiss();
-//                                                                    }
-//                                                                }
-//                                                            });
-//                                                }
                                             }
                                         });
                             }
@@ -1002,11 +862,9 @@ public class Fragment_HomePage extends Fragment {
                                             }
                                             newTrackNumberArrayList.clear();
                                             addTrackNumberAdapter.notifyDataSetChanged();
-//                                            parcelsModelArrayList.clear();
                                             buttonToggleGroupListview.clearChecked();
                                             searchParcels.setText("");
                                             searchParcels.clearFocus();
-//                                            getDataParcel();
                                             parcelsAdapter.notifyDataSetChanged();
                                         }
                                     });
